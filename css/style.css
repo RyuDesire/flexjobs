@@ -1,0 +1,259 @@
+:root {
+  /*Dark theme colors*/
+  --white: #FFF;
+  --blue: #3060FF;
+  --light-blue: #5a81ff;
+  --light-gray: #96939B;
+  --medium-gray: #2E2E39;
+  --dark-gray: #1c1c24;
+  --light-black: #222328;
+  --black: #11121A;
+
+  /*Light theme colors*/
+  --royal-blue: #14248A;
+  --smooth-blue: #ade8f4;
+  --orange: #FF7F11;
+  --yellow: #ee9b00;
+  --midnight-blue: #1B065E;
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --header: var(--dark-gray);
+  --input: var(--dark-gray);
+  --iconColor:var(--white);
+  --fontColor: var(--white);
+  --inputFontColor: var(--white);
+  --lightFontColor: var(--light-gray);
+  --bnt: var(--light-blue);
+  --btnDark: var(--medium-gray);
+  --btnHover: var(--light-blue);
+  --itemBg: var(--dark-gray);
+  --border: var(--light-black);
+  --switchIcon: var(--yellow);
+  --switchBorder: var(--white);
+  --switchBg: var(--black);
+}
+
+.light-theme {
+  --bg: var(--white);
+  --header: var(--orange);
+  --input: var(--white);
+  --fontColor: var(--white);
+  --iconColor: var(--royal-blue);
+  --inputFontColor: var(--royal-blue);
+  --lightFontColor: var(--royal-blue);
+  --bnt: var(--orange);
+  --btnDark: var(--blue);
+  --btnHover: var(--smooth-blue);
+  --itemBg: var(--light-blue);
+  --border: var(--midnight-blue);
+  --switchIcon: var(--yellow);
+  --switchBorder: var(--white);
+  --switchBg: var(--black);
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  color: var(--fontColor);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--header);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.header-container {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.header-container .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header-container .logo img {
+  height: 100%;
+}
+
+.switch-theme {
+  background-color: var(--switchBg);
+  padding: 10px 12px;
+  border: 2px solid var(--switchBorder);
+  border-radius: 50%;
+  font-size: 24px;
+  color: var(--switchIcon);
+}
+
+.search {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.search-container {
+  background-color: var(--input);
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  display: flex;
+  overflow: hidden;
+}
+
+.input-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--inputFontColor);
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.input-container i {
+  font-size: 20px;
+  color: var(--iconColor);
+  margin-left: 25px;
+}
+
+.button-container {
+  background: var(--bnt);
+  font-size: 20px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-container:hover {
+  background: var(--btnHover);
+}
+
+.jobs-list {
+  max-width: 1250px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+}
+
+.jobs-list h1 {
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+.jobs-container {
+  display: grid;
+  padding-bottom: 50px;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background: var(--bg);
+}
+
+.job-tile {
+  background: var(--itemBg);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--fontColor);
+  padding: 30px;
+  transition: transform 0.2s;
+}
+
+.job-tile:hover {
+  transform: scale(1.05);
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top img {
+  width: 50px;
+  height: 50px;
+}
+
+.rolename {
+  margin: 20px 0;
+}
+
+.rolename span {
+  font-size: 20px;
+}
+
+.description {
+  flex-grow: 1;
+  height: 105px;
+  overflow: hidden;
+  font-size: 18px;
+  color: var(--lightFontColor);
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--lightFontColor);
+  background-color: var(--btnDark);
+  font-size: 14px;
+  font-size: 18px;
+}
+
+.apply-now {
+  color: var(--fontColor);
+  background: var(--bnt);
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 930px) {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .jobs-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
